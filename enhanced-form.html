@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Web Page with Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #b4a4a4;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #c2bfbf;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        form div {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Enhanced Web Page</h1>
+    </header>
+
+    <section>
+        <h2>Favorite Books</h2>
+        <ol>
+            <li>The Great Gatsby</li>
+            <li>Adventures Of Cleops</li>
+            <li>Fisher Boy</li>
+            <li>End Of The Tunnel</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Programming Languages</h2>
+        <ul>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>C++</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Monthly Expenses</h2>
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Amount(GHS)</th>
+            </tr>
+            <tr>
+                <td>Rent</td>
+                <td>1200</td>
+            </tr>
+            <tr>
+                <td>Provisions</td>
+                <td>400</td>
+            </tr>
+            <tr>
+                <td>Utilities</td>
+                <td>150</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>Nature Image (Media)</h2>
+        <img src="https://via.placeholder.com/600x400" alt="Placeholder nature image">
+    </section>
+
+    <section>
+        <h2>Registration Form</h2>
+        <form>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required minlength="3" placeholder="Enter your full name">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                <div>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+                </div>
+                <div>
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Account Details</legend>
+                <div>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required minlength="4" maxlength="20">
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required minlength="8" placeholder="At least 8 characters">
+                </div>
+                <div>
+                    <label for="website">Website (readonly):</label>
+                    <input type="url" id="website" name="website" value="https://example.com" readonly>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferences</legend>
+                <div>
+                    <label>Favorite Color:</label>
+                    <input type="color" name="color" value="#ff0000">
+                </div>
+                <div>
+                    <label for="newsletter">Subscribe to newsletter:</label>
+                    <input type="checkbox" id="newsletter" name="newsletter" checked>
+                </div>
+                <div>
+                    <label for="membership">Membership Level:</label>
+                    <select id="membership" name="membership" required>
+                        <option value="">Select one</option>
+                        <option value="basic">Basic</option>
+                        <option value="premium">Premium</option>
+                        <option value="vip">VIP</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="feedback">Feedback:</label>
+                    <textarea id="feedback" name="feedback" rows="4" placeholder="Your comments here"></textarea>
+                </div>
+            </fieldset>
+
+            <div>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
